@@ -3,8 +3,14 @@ name: Validate Pull Requests
 on:
   push:
     branches: [master]
+    paths-ignore:
+      - '.github/workflows/maintainer.yml'
+      - '.github/workflows/validate-pr.yml'
   pull_request:
     branches: [master]
+    paths-ignore:
+      - '.github/workflows/maintainer.yml'
+      - '.github/workflows/validate-pr.yml'
 
 jobs:
   validate:
